@@ -52,8 +52,8 @@ resource "aws_ecs_task_definition" "service" {
   family = "service"
   container_definitions = jsonencode([
     {
-      name      = "first-image"
-      image     = "968350853817.dkr.ecr.us-east-1.amazonaws.com/ecsapplication:latest"
+      name      = "ecrapplication"
+      image     = "public.ecr.aws/e3d5a4z9/ecrapplication:latest"
           network_mode             = "awsvpc"
           requires_compatibilities = ["FARGATE"]
           execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
